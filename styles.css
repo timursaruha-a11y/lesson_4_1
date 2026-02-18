@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #f2f2f7;
+    color: #1d1d1f;
+    line-height: 1.5;
+}
+
+.content {
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    border: 1px solid #e5e5ea;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #1d1d1f;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1d1d1f;
+    border-bottom: 2px solid #f2f2f7;
+    padding-bottom: 12px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 24px 0 16px;
+    color: #1d1d1f;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #424245;
+}
+
+ul {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+li {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #424245;
+    line-height: 1.5;
+}
+
+.section-list {
+    background-color: #f8f8fa;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 28px 0;
+    border-left: 4px solid #30b0c7;
+}
+
+.section-list li {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.emoji {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.intro-text {
+    font-size: 18px;
+    background-color: #f2f8ff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #007aff;
+    margin-bottom: 32px;
+}
+
+.fact-item, .quote-item {
+    background-color: #fbfbfd;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #e5e5ea;
+    counter-increment: item-counter;
+    position: relative;
+    padding-left: 48px;
+}
+
+.fact-item:before {
+    content: counter(item-counter) ".";
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-weight: 700;
+    color: #30b0c7;
+    font-size: 18px;
+}
+
+.fact-list {
+    counter-reset: item-counter;
+}
+
+.quote-item {
+    border-left: 4px solid #5ac8fa;
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.quote-item:before {
+    content: "“";
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 24px;
+    color: #5ac8fa;
+    font-weight: bold;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5ea;
+}
+
+.nav-btn {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-btn:hover {
+    background-color: #0056cc;
+}
+
+.nav-btn.disabled {
+    background-color: #c7c7cc;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e5e5ea;
+    margin: 24px 0;
+}
+
+.note {
+    font-size: 15px;
+    color: #8e8e93;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px dashed #e5e5ea;
+}
+
+.highlight {
+    color: #ff3b30;
+    font-weight: 600;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Стили для картинок */
+.cat-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 0 auto 24px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid #fff;
+}
+
+.header-with-image {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.header-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.meme-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border: 2px solid #e5e5ea;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 12px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .header-with-image {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
